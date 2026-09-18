@@ -5,6 +5,7 @@ app.use(express.json());
 // using cors
 const cors = require("cors");
 app.use(cors());
+app.use(express.static("dist"));//middleware for running on render
 
 // middleware method creation
 const requestLogger = (req, res, next) => {
