@@ -21,7 +21,7 @@ const requestLogger = (req, res, next) => {
 
 app.use(requestLogger);
 
-const port = 3001;
+const port = process.env.PORT||3001;//get port number from environment variables if there are any. Otherwise (in dev) get 3001
 let movies = [
   {
     title: "Inception",
